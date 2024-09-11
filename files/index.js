@@ -7,10 +7,10 @@ const NEZHA_SERVER = process.env.NEZHA_SERVER || '';
 const NEZHA_PORT = process.env.NEZHA_PORT || '';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';
 const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'choreo.phenixg.eu.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiMzYwMTZkNmRlZTQwNDlmMTY2OTZhNzNhNGIxNjgwYWQiLCJ0IjoiMDQwNTNkY2EtYmRjZi00YmUyLWE4MjAtNGU2NjJlMjQ0N2Y3IiwicyI6IllUbGhZMkUwWkdRdE5URTBZeTAwTm1KaExUZzVZMll0TVRrMlpUVXhPVGt6WXpneSJ9';
+const ARGO_AUTH = process.env.ARGO_AUTH || '';
 const CFIP = process.env.CFIP || 'na.ma';
 const NAME = process.env.NAME || 'Choreo';
-
+console.log(`ARGO_AUTH :${ARGO_AUTH}`)
 // root route
 app.get("/", function(req, res) {
   res.send("Hello world!");
